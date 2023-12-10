@@ -19,3 +19,8 @@ class Enemy:
         pass
         self.hit_box.x += self.speed
         self.hit_box.y += self.speed
+        if self.hit_box.x > self.x2 and self.hit_box.y > self.y2:
+            self.speed *= -1
+        if self.hit_box.x < self.x1 and self.hit_box.y < self.y1:
+            self.speed *= -1
+
